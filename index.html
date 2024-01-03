@@ -4,11 +4,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="index.css">
+
 	<script src="https://balkan.app/js/FamilyTree.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 	<title>Родовое древо</title>
 </head>
 <body>
 <div id="tree"></div>
+<script type="text/javascript">
+	//JavaScript
+var family = new FamilyTree(document.getElementById("tree"), {
+    mouseScrool: FamilyTree.action.none,
+    nodeBinding: {
+        field_0: "name"
+    },
+    nodes: [
+        { id: 1, pids: [2], name: "Amber McKenzie", gender: "female" },
+        { id: 2, pids: [1], name: "Ava Field", gender: "male" },
+        { id: 3, mid: 1, fid: 2, name: "Peter Stevens", gender: "male" }
+    ]
+});
+</script>
 </body>
 </html>
